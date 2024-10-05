@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7; /* light gray background */
+}
+
+.search-bar {
+    max-width: 1390px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* add a subtle gradient effect */
+    background-image: linear-gradient(to bottom, #fff, #f7f7f7);
+    /* add a creative shadow effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333; /* darker text color */
+    /* add a creative text shadow effect */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* add a subtle box shadow effect */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* add a creative focus effect */
+    transition: box-shadow 0.2s ease;
+}
+
+.search-bar input[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button {
+    width: 100%;
+    height: 40px;
+    background-color: #337ab7; /* blue button color */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* add a subtle hover effect */
+    transition: background-color 0.2s ease;
+    /* add a creative hover effect */
+    transform: translateY(0);
+    transition: transform 0.2s ease;
+}
+
+.search-bar button:hover {
+    background-color: #23527c; /* darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.result-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #666; /* darker text color */
+    /* add a creative text shadow effect */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}

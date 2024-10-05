@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="search-bar">
+        <label id = 'inp' for="search-input">Search:</label>
+        <input type="text" id="search-input" placeholder="Enter your search query">
+        <button id="find-btn">Find</button>
+        <div class="result-text">
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('find-btn').addEventListener('click', function() {
+            var searchInput = document.getElementById('search-input').value;
+
+            // Make an AJAX request to the Django view
+            fetch(`/build/?query=${encodeURIComponent(searchInput)}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').innerHTML = data.result;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+            // Clear the input field
+            document.getElementById('search-input').value = '';
+        });
+    </script>
+</body>
+</html>
