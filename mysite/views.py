@@ -70,4 +70,4 @@ def build_view(request):
     return JsonResponse({'result': result})
 
 def homePage(request):
-    return render(request, "template/main.html")
+    return render(request, "/template/main.html")
